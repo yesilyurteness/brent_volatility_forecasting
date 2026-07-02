@@ -1,0 +1,75 @@
+{
+  "model": "AttentionBiLSTM",
+  "lookback": 30,
+  "rows": {
+    "raw": 2512,
+    "train_sequences": 1669,
+    "val_sequences": 377,
+    "test_sequences": 376
+  },
+  "date_ranges": {
+    "train": [
+      "2014-05-14",
+      "2020-12-30"
+    ],
+    "val": [
+      "2020-12-31",
+      "2022-06-30"
+    ],
+    "test": [
+      "2022-07-01",
+      "2023-12-28"
+    ]
+  },
+  "feature_count": 52,
+  "best_epoch": 2,
+  "return_metrics": {
+    "train": {
+      "rmse": 0.02662662954245054,
+      "mae": 0.017017310485243797,
+      "r2": 0.0035182833671569824
+    },
+    "val": {
+      "rmse": 0.024850312974676183,
+      "mae": 0.017726955935359,
+      "r2": -0.0015056133270263672
+    },
+    "test": {
+      "rmse": 0.02241721250990389,
+      "mae": 0.017283529043197632,
+      "r2": -0.005484819412231445
+    },
+    "test_zero_return_baseline": {
+      "rmse": 0.02237773468803264,
+      "mae": 0.017279211431741714,
+      "r2": -0.001946568489074707
+    },
+    "test_train_mean_return_baseline": {
+      "rmse": 0.022362367067850164,
+      "mae": 0.01729563996195793,
+      "r2": -0.0005707740783691406
+    }
+  },
+  "direction_accuracy": {
+    "test_attention_bilstm": 0.5186170212765957,
+    "test_zero_return_baseline": 0.0,
+    "test_train_mean_return_baseline": 0.48936170212765956
+  },
+  "price_metrics": {
+    "test_attention_bilstm": {
+      "rmse": 1.9860057995611577,
+      "mae": 1.4936473318002705,
+      "r2": 0.9403691840116947
+    },
+    "test_random_walk_baseline": {
+      "rmse": 1.9816513462698988,
+      "mae": 1.4927928845790002,
+      "r2": 0.9406303866147238
+    },
+    "test_train_mean_return_baseline": {
+      "rmse": 1.9796064395212285,
+      "mae": 1.4938740966488906,
+      "r2": 0.9407528528426825
+    }
+  }
+}

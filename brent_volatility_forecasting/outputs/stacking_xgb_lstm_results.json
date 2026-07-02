@@ -1,0 +1,114 @@
+{
+  "model": "Stacking_XGBoost_AttentionBiLSTM",
+  "meta_model": "RidgeCV trained on validation predictions",
+  "rows": {
+    "val_meta_rows": 377,
+    "test_rows": 376
+  },
+  "date_ranges": {
+    "val": [
+      "2020-12-31",
+      "2022-06-30"
+    ],
+    "test": [
+      "2022-07-01",
+      "2023-12-28"
+    ]
+  },
+  "base_models": {
+    "xgboost_best_iteration": 116,
+    "lstm_lookback": 60,
+    "lstm_best_epoch": 1
+  },
+  "meta_coefficients": {
+    "ridge_alpha": 100.0,
+    "ridge_intercept": 0.0020365994423627853,
+    "ridge_xgboost_weight": 1.7758873582351953e-05,
+    "ridge_lstm_weight": -5.371208899873636e-08,
+    "linear_intercept": 0.0038391451817005873,
+    "linear_xgboost_weight": 0.8242586851119995,
+    "linear_lstm_weight": -1.1171305179595947
+  },
+  "return_metrics": {
+    "stacking_ridge": {
+      "rmse": 0.022559441048947127,
+      "mae": 0.017304806038737297,
+      "r2": -0.018284082412719727
+    },
+    "stacking_linear": {
+      "rmse": 0.022607500094696573,
+      "mae": 0.017334213480353355,
+      "r2": -0.02262735366821289
+    },
+    "simple_average": {
+      "rmse": 0.022414993638671644,
+      "mae": 0.017285985872149467,
+      "r2": -0.005285739898681641
+    },
+    "xgboost": {
+      "rmse": 0.022399673668632228,
+      "mae": 0.017334887757897377,
+      "r2": -0.003912091255187988
+    },
+    "attention_bilstm": {
+      "rmse": 0.022465935959463394,
+      "mae": 0.0172768235206604,
+      "r2": -0.00986027717590332
+    },
+    "zero_return_baseline": {
+      "rmse": 0.02237773468803264,
+      "mae": 0.017279211431741714,
+      "r2": -0.001946568489074707
+    },
+    "train_mean_return_baseline": {
+      "rmse": 0.02236328910365019,
+      "mae": 0.017293853486032462,
+      "r2": -0.0006532772084064664
+    }
+  },
+  "direction_accuracy": {
+    "stacking_ridge": 0.5106382978723404,
+    "stacking_linear": 0.5079787234042553,
+    "simple_average": 0.5186170212765957,
+    "xgboost": 0.5,
+    "attention_bilstm": 0.5106382978723404,
+    "train_mean_return_baseline": 0.48936170212765956
+  },
+  "price_metrics": {
+    "stacking_ridge": {
+      "rmse": 2.0003204531225287,
+      "mae": 1.496891056657668,
+      "r2": 0.9395064768385566
+    },
+    "stacking_linear": {
+      "rmse": 2.0054959463195385,
+      "mae": 1.4995705640510817,
+      "r2": 0.9391930382162679
+    },
+    "simple_average": {
+      "rmse": 1.9859202147328179,
+      "mae": 1.4937754533133487,
+      "r2": 0.9403743233553828
+    },
+    "xgboost": {
+      "rmse": 1.9836015172485806,
+      "mae": 1.497458732693763,
+      "r2": 0.9405134761722661
+    },
+    "attention_bilstm": {
+      "rmse": 1.9911489527795891,
+      "mae": 1.4936773904927507,
+      "r2": 0.9400599326078298
+    },
+    "random_walk_baseline": {
+      "rmse": 1.9816513462698988,
+      "mae": 1.4927928845790002,
+      "r2": 0.9406303866147238
+    },
+    "train_mean_return_baseline": {
+      "rmse": 1.9797459345304176,
+      "mae": 1.4937455728498061,
+      "r2": 0.9407445027258494
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local data
+work/veriseti.xlsx
+*.xlsx
+
+# Trained model artifacts
+*.pkl
+*.pt
+
+# Notebook / OS noise
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Large or local-only generated artifacts
+outputs/*.pkl
+outputs/*.pt

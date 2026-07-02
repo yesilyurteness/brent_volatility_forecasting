@@ -1,0 +1,65 @@
+{
+  "target": "volatility_10d",
+  "horizon": 10,
+  "optimization": {
+    "lstm_n_trials": 25,
+    "lstm_best_validation_rmse": 0.011530998217660998,
+    "lstm_best_params": {
+      "lookback": 20,
+      "hidden_size": 8,
+      "dropout": 0.002362790819753588,
+      "lr": 0.0017976606856455306,
+      "weight_decay": 0.0026962537938435564,
+      "batch_size": 128,
+      "clip_norm": 1.0075762331461322
+    }
+  },
+  "rows": {
+    "train": 1679,
+    "val": 377,
+    "test": 374
+  },
+  "base_models": {
+    "xgb_best_iteration": 143,
+    "lstm_lookback": 20,
+    "lstm_best_epoch": 14
+  },
+  "stacking": {
+    "ridge_alpha": 0.00013738237958832637,
+    "ridge_intercept": -0.010482463985681534,
+    "ridge_xgb_weight": 1.51944100856781,
+    "ridge_lstm_weight": -0.06313228607177734
+  },
+  "test_metrics": {
+    "xgboost": {
+      "rmse": 0.006155876628813548,
+      "mae": 0.004867429379373789,
+      "r2": 0.16098111867904663
+    },
+    "attention_bilstm": {
+      "rmse": 0.006184065495351075,
+      "mae": 0.0047098794020712376,
+      "r2": 0.15327948331832886
+    },
+    "stacking_ridge": {
+      "rmse": 0.006769249088886919,
+      "mae": 0.005004199221730232,
+      "r2": -0.014548778533935547
+    },
+    "simple_average": {
+      "rmse": 0.005990221132512407,
+      "mae": 0.0047075566835701466,
+      "r2": 0.20552974939346313
+    },
+    "train_mean_baseline": {
+      "rmse": 0.00674943000246199,
+      "mae": 0.005265952053076443,
+      "r2": -0.008616663455677909
+    },
+    "past_volatility_baseline": {
+      "rmse": 0.007847919010231578,
+      "mae": 0.005920733320117134,
+      "r2": -0.36364388266484116
+    }
+  }
+}
